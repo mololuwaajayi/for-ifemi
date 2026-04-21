@@ -79,6 +79,12 @@ section {
 .sweet { padding: 3rem 2rem; text-align: center; background: #2a1a0e; color: #f5efe6; font-style: italic; font-size: clamp(1.05rem, 3vw, 1.4rem); line-height: 1.8; }
 .sweet strong { color: #c9a84c; font-style: normal; font-family: 'Cinzel', serif; }
 
+/* LOCAL AUDIO PLAYER */
+.audio-wrap { margin-top: 1.6rem; text-align: center; }
+.audio-player { width: 100%; max-width: 480px; display: block; margin: 0 auto; accent-color: var(--ac, #c9a84c); }
+.audio-player::-webkit-media-controls-panel { background: rgba(255,255,255,0.08); border-radius: 4px; }
+audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
+
 /* HERO */
 .hero-hearts { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
 .hero-hearts span { position:absolute; font-size:clamp(1rem,3vw,1.8rem); opacity:0; animation:riseHeart 7s ease-in infinite; }
@@ -208,8 +214,8 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
   </div>
 </div>
 
-<!-- Put your birthday MP3 at ./audio/birthday.mp3 -->
-<audio id="gate-audio" src="./audio/birthday.mp3"></audio>
+<!-- Gate song: Simi Happy Birthday -->
+<audio id="gate-audio" src="./audio/Birthday.mp3"></audio>
 
 <!-- Music corner -->
 <div id="mc">
@@ -272,7 +278,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
       </div>
     </div>
     <div class="music-label" style="color:#c05070;">🎵 Playing for this section</div>
-    <audio controls class="local-audio" src="./audio/born-first.mp3"></audio>
+    <audio controls class="local-audio" src="./audio/Born first.mp3"></audio>
   </div>
 </section>
 
@@ -294,7 +300,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
       </div>
     </div>
     <div class="music-label" style="color:#8aba80;">🎵 I Was Born to Be the First</div>
-    <audio controls class="local-audio" src="./audio/born-first.mp3"></audio>
+    <audio controls class="local-audio" src="./audio/Born first.mp3"></audio>
   </div>
 </section>
 
@@ -309,7 +315,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <p class="madrid-body">Real Madrid wins when they should not be able to. They find the way in the 90th minute, in the final, in the dark. That is you, Ifemi. Built the same way. The kind that does not fold. That finds the path through. That turns ordinary moments into something people remember. Madrid is your team because your spirit is the same: stubborn, brilliant, and made for the biggest stages.</p>
     <div class="madrid-hala">Hala Madrid <span>y nada mas</span> 🏆</div>
     <div class="music-label" style="color:#00205b;">🎵 Hala Madrid Anthem</div>
-    <audio controls class="local-audio" src="./audio/hala-madrid.mp3"></audio>
+    <audio controls class="local-audio" src="./audio/Hala Madrid.mp3"></audio>
   </div>
 </section>
 
@@ -328,7 +334,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <div class="divider" style="background:#c96030;"></div>
     <div style="text-align:center;margin-bottom:2.2rem;">
       <div class="music-label" style="color:#c96030;">🎵 Dandelions, Ruth B.</div>
-      <audio controls class="local-audio" src="./audio/dandelions.mp3"></audio>
+      <audio controls class="local-audio" src="./audio/Dandelions.mp3"></audio>
     </div>
     <ul class="reason-list">
       <li class="reason-item"><span class="reason-num">01</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
@@ -354,7 +360,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <div class="poem-symbol">✦</div>
     <h2 class="poem-title">For You</h2>
     <div class="music-label" style="color:#6090c0;">🎵 Ordinary</div>
-    <audio controls class="local-audio" src="./audio/ordinary.mp3" style="margin-bottom:2.5rem;"></audio>
+    <audio controls class="local-audio" src="./audio/Ordinary.mp3" style="margin-bottom:2.5rem;"></audio>
     <div class="poem-body">
       <div class="poem-stanza">
         <p class="poem-line">We do not always speak the same language,</p>
@@ -394,7 +400,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <div class="oriki-sub">Oluwaseyifunmi · Eni ti a ye ko ni</div>
     <div class="divider" style="background:#b06020;"></div>
     <div class="music-label" style="color:#b06020;">🎵 Meji Meji, Brymo</div>
-    <audio controls class="local-audio" src="./audio/meji-meji.mp3" style="margin-bottom:2.5rem;"></audio>
+    <audio controls class="local-audio" src="./audio/Meji meji.mp3" style="margin-bottom:2.5rem;"></audio>
     <div class="oriki-cols">
       <div>
         <div class="oriki-col-label">Yoruba</div>
@@ -432,14 +438,14 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <h2 class="gallery-title">A Thousand Frames of You</h2>
     <p class="gallery-sub">Some loves are best told in pictures.</p>
     <div class="music-label" style="color:#6040a0;">🎵 Birthday Song, Simi and Adekunle Gold</div>
-    <audio controls class="local-audio" src="./audio/birthday.mp3" style="margin-bottom:2rem;"></audio>
+    <audio controls class="local-audio" src="./audio/Birthday.mp3" style="margin-bottom:2rem;"></audio>
     <div class="gallery-grid">
-      <div class="gallery-slot"><img src="./images/photo1.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 1</div></div>
-      <div class="gallery-slot"><img src="./images/photo2.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 2</div></div>
-      <div class="gallery-slot"><img src="./images/photo3.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 3</div></div>
-      <div class="gallery-slot"><img src="./images/photo4.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 4</div></div>
-      <div class="gallery-slot"><img src="./images/photo5.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 5</div></div>
-      <div class="gallery-slot"><img src="./images/photo6.jpg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 6</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 1.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 1</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 2.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 2</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 3.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 3</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 4.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 4</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 5.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 5</div></div>
+      <div class="gallery-slot"><img src="./images/Photo 6.jpeg" onerror="this.style.display='none'" alt=""><div class="gallery-ph">📷</div><div class="gallery-ph-text">Photo 6</div></div>
     </div>
   </div>
 </section>
@@ -451,7 +457,6 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <span class="closing-flame">☕</span>
     <div class="closing-title">A Note for You</div>
     <div class="closing-card">
-      <!-- PASTE YOUR CLOSING NOTE HERE. Delete this line and write your words. -->
       <p style="font-size:0.72rem;letter-spacing:0.3em;font-family:'Lato',sans-serif;text-transform:uppercase;color:#9a7040;margin-bottom:1.8rem;font-style:normal;">A letter for Ifemi</p>
       <p>We are a team.</p>
       <p>And I choose you.</p>
