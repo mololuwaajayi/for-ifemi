@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ifemi, Twenty-Fire</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Cormorant Garamond', serif; overflow-x: hidden; background: #fdf6ee; color: #2a1a0e; }
+body { font-family: 'Playfair Display', serif; overflow-x: hidden; background: #fdf6ee; color: #2a1a0e; }
 body.locked { overflow: hidden; }
 
 /* GATE */
@@ -21,11 +21,11 @@ body.locked { overflow: hidden; }
 }
 #gate.gone { opacity: 0; visibility: hidden; pointer-events: none; }
 .gate-rose { font-size: 3.5rem; animation: floatY 3s ease-in-out infinite; }
-.gate-title { font-family: 'Cinzel', serif; font-size: clamp(1.1rem, 4vw, 1.7rem); color: #c9a84c; letter-spacing: 0.35em; text-align: center; text-transform: uppercase; }
+.gate-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem, 4vw, 1.7rem); color: #c9a84c; letter-spacing: 0.35em; text-align: center; text-transform: uppercase; }
 .gate-sub { font-style: italic; font-size: clamp(0.95rem, 3vw, 1.2rem); color: #7a6a58; text-align: center; padding: 0 2rem; line-height: 1.7; }
-.gate-btn { background: transparent; border: 1px solid #c9a84c; color: #c9a84c; font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.3em; padding: 1rem 2.8rem; cursor: pointer; text-transform: uppercase; transition: background 0.4s, color 0.4s; margin-top: 0.5rem; }
+.gate-btn { background: transparent; border: 1px solid #c9a84c; color: #c9a84c; font-family: 'DM Serif Display', serif; font-size: 0.82rem; letter-spacing: 0.3em; padding: 1rem 2.8rem; cursor: pointer; text-transform: uppercase; transition: background 0.4s, color 0.4s; margin-top: 0.5rem; }
 .gate-btn:hover { background: #c9a84c; color: #0a0805; }
-.gate-hint { font-size: 0.72rem; color: #4a3a2a; letter-spacing: 0.2em; font-family: 'Lato', sans-serif; text-transform: uppercase; text-align: center; }
+.gate-hint { font-size: 0.72rem; color: #4a3a2a; letter-spacing: 0.2em; font-family: 'Jost', sans-serif; text-transform: uppercase; text-align: center; }
 .gate-prog-wrap { width: 220px; height: 2px; background: #1a1208; margin-top: 0.4rem; display: none; }
 .gate-prog-fill { height: 100%; background: #c9a84c; width: 0%; transition: width 0.3s linear; }
 
@@ -37,7 +37,7 @@ body.locked { overflow: hidden; }
   backdrop-filter: blur(12px); max-width: 240px;
 }
 .mc-dot { width: 7px; height: 7px; border-radius: 50%; background: #c9a84c; animation: mcPulse 1.6s ease-in-out infinite; flex-shrink: 0; }
-.mc-text { font-size: 0.7rem; color: #7a6a58; font-family: 'Lato', sans-serif; overflow: hidden; }
+.mc-text { font-size: 0.7rem; color: #7a6a58; font-family: 'Jost', sans-serif; overflow: hidden; }
 .mc-text b { display: block; color: #e8cc7a; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* SECTION THEMES */
@@ -71,13 +71,13 @@ section {
 .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 .divider { width: 50px; height: 1px; margin: 1.8rem auto; opacity: 0.4; }
-.section-label { font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.45em; text-transform: uppercase; text-align: center; margin-bottom: 1rem; opacity: 0.6; }
+.section-label { font-family: 'DM Serif Display', serif; font-size: 0.68rem; letter-spacing: 0.45em; text-transform: uppercase; text-align: center; margin-bottom: 1rem; opacity: 0.6; }
 .s-embed { width: 100%; max-width: 480px; border: none; display: block; margin: 0.75rem auto 0; }
-.music-label { font-size: 0.72rem; letter-spacing: 0.2em; font-family: 'Lato', sans-serif; text-transform: uppercase; text-align: center; opacity: 0.5; margin-top: 1.4rem; }
+.music-label { font-size: 0.72rem; letter-spacing: 0.2em; font-family: 'Jost', sans-serif; text-transform: uppercase; text-align: center; opacity: 0.5; margin-top: 1.4rem; }
 
 /* SWEET STRIPS */
 .sweet { padding: 3rem 2rem; text-align: center; background: #2a1a0e; color: #f5efe6; font-style: italic; font-size: clamp(1.05rem, 3vw, 1.4rem); line-height: 1.8; }
-.sweet strong { color: #c9a84c; font-style: normal; font-family: 'Cinzel', serif; }
+.sweet strong { color: #c9a84c; font-style: normal; font-family: 'DM Serif Display', serif; }
 
 /* LOCAL AUDIO PLAYER */
 .audio-wrap { margin-top: 1.6rem; text-align: center; }
@@ -93,29 +93,29 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
 .hero-hearts span:nth-child(3){left:48%;animation-delay:2.8s;}
 .hero-hearts span:nth-child(4){left:68%;animation-delay:0.9s;font-size:1rem;}
 .hero-hearts span:nth-child(5){left:88%;animation-delay:3.8s;}
-.hero-pre { font-family:'Cinzel',serif; font-size:clamp(0.6rem,2vw,0.78rem); letter-spacing:0.55em; text-transform:uppercase; color:#b07820; opacity:0; animation:fadeUp 1s ease 0.4s forwards; margin-bottom:1.8rem; }
-.hero-name { font-family:'Cinzel',serif; font-size:clamp(3rem,12vw,7.5rem); font-weight:700; color:#2a1a0e; line-height:1; letter-spacing:0.04em; opacity:0; animation:fadeUp 1s ease 0.7s forwards; }
-.hero-sub { font-family:'Cinzel',serif; font-size:clamp(0.75rem,2.5vw,1rem); letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-top:0.8rem; opacity:0; animation:fadeUp 1s ease 1s forwards; }
+.hero-pre { font-family:'DM Serif Display',serif; font-size:clamp(0.6rem,2vw,0.78rem); letter-spacing:0.55em; text-transform:uppercase; color:#b07820; opacity:0; animation:fadeUp 1s ease 0.4s forwards; margin-bottom:1.8rem; }
+.hero-name { font-family:'DM Serif Display',serif; font-size:clamp(3rem,12vw,7.5rem); font-weight:700; color:#2a1a0e; line-height:1; letter-spacing:0.04em; opacity:0; animation:fadeUp 1s ease 0.7s forwards; }
+.hero-sub { font-family:'DM Serif Display',serif; font-size:clamp(0.75rem,2.5vw,1rem); letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-top:0.8rem; opacity:0; animation:fadeUp 1s ease 1s forwards; }
 .hero-tag { font-style:italic; font-size:clamp(1rem,3vw,1.4rem); color:#7a5a3a; margin-top:2rem; opacity:0; animation:fadeUp 1s ease 1.3s forwards; line-height:1.6; text-align:center; }
 .cd-wrap { margin-top:3rem; opacity:0; animation:fadeUp 1s ease 1.6s forwards; }
-.cd-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.45em; text-transform:uppercase; color:#9a7a4a; margin-bottom:1.4rem; text-align:center; }
+.cd-label { font-family:'DM Serif Display',serif; font-size:0.62rem; letter-spacing:0.45em; text-transform:uppercase; color:#9a7a4a; margin-bottom:1.4rem; text-align:center; }
 .cd-row { display:flex; gap:clamp(1rem,4vw,2.5rem); justify-content:center; flex-wrap:wrap; }
 .cd-u { text-align:center; }
-.cd-num { font-family:'Cinzel',serif; font-size:clamp(2rem,6vw,3.8rem); color:#b07820; font-weight:700; line-height:1; }
-.cd-ul { font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:#9a7a4a; margin-top:0.4rem; font-family:'Lato',sans-serif; }
-.bday-msg { font-family:'Cinzel',serif; font-size:clamp(1.2rem,4vw,2rem); color:#b07820; letter-spacing:0.15em; display:none; text-align:center; }
+.cd-num { font-family:'DM Serif Display',serif; font-size:clamp(2rem,6vw,3.8rem); color:#b07820; font-weight:700; line-height:1; }
+.cd-ul { font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:#9a7a4a; margin-top:0.4rem; font-family:'Jost',sans-serif; }
+.bday-msg { font-family:'DM Serif Display',serif; font-size:clamp(1.2rem,4vw,2rem); color:#b07820; letter-spacing:0.15em; display:none; text-align:center; }
 
 /* MAY */
-.may-giant { font-family:'Cinzel',serif; font-size:clamp(5rem,20vw,12rem); font-weight:700; color:transparent; -webkit-text-stroke:1.5px #c05070; letter-spacing:0.3em; line-height:1; text-align:center; margin-bottom:2.5rem; }
+.may-giant { font-family:'DM Serif Display',serif; font-size:clamp(5rem,20vw,12rem); font-weight:700; color:transparent; -webkit-text-stroke:1.5px #c05070; letter-spacing:0.3em; line-height:1; text-align:center; margin-bottom:2.5rem; }
 .may-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:1.5rem; }
 .may-card { border:1px solid rgba(180,60,90,0.2); padding:2rem 1.2rem; text-align:center; background:rgba(255,255,255,0.5); backdrop-filter:blur(6px); transition:border-color 0.3s,transform 0.3s; }
 .may-card:hover { border-color:#c05070; transform:translateY(-4px); }
-.may-letter { font-family:'Cinzel',serif; font-size:2.8rem; color:#c05070; font-weight:700; line-height:1; margin-bottom:0.8rem; }
-.may-word { font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:0.2em; color:#3a1020; text-transform:uppercase; margin-bottom:0.7rem; }
+.may-letter { font-family:'DM Serif Display',serif; font-size:2.8rem; color:#c05070; font-weight:700; line-height:1; margin-bottom:0.8rem; }
+.may-word { font-family:'DM Serif Display',serif; font-size:0.72rem; letter-spacing:0.2em; color:#3a1020; text-transform:uppercase; margin-bottom:0.7rem; }
 .may-desc { font-style:italic; font-size:0.95rem; color:#6a3040; line-height:1.7; }
 
 /* CHESS */
-.chess-title { font-family:'Cinzel',serif; font-size:clamp(1.8rem,5vw,3.2rem); color:#d8f0d0; text-align:center; margin-bottom:0.4rem; }
+.chess-title { font-family:'DM Serif Display',serif; font-size:clamp(1.8rem,5vw,3.2rem); color:#d8f0d0; text-align:center; margin-bottom:0.4rem; }
 .chess-sub { font-style:italic; color:#8aba80; text-align:center; font-size:1.1rem; margin-bottom:2.5rem; }
 .chess-grid { display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:center; }
 .chess-pieces { font-size:3.5rem; line-height:1.8; text-align:center; letter-spacing:0.3rem; opacity:0.7; }
@@ -124,56 +124,56 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
 .chess-pull { border-left:2px solid #4a8a40; padding-left:1.4rem; margin-top:1.8rem; font-style:italic; font-size:1.2rem; color:#d8f0d0; line-height:1.7; }
 
 /* MADRID */
-.madrid-band { display:inline-block; background:#00205b; color:#fff; font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:0.5em; text-transform:uppercase; padding:0.4rem 1.5rem; margin-bottom:1.5rem; }
+.madrid-band { display:inline-block; background:#00205b; color:#fff; font-family:'DM Serif Display',serif; font-size:0.65rem; letter-spacing:0.5em; text-transform:uppercase; padding:0.4rem 1.5rem; margin-bottom:1.5rem; }
 .madrid-crest { font-size:4.5rem; margin-bottom:1rem; }
-.madrid-title { font-family:'Cinzel',serif; font-size:clamp(2rem,7vw,4.8rem); color:#00205b; font-weight:700; line-height:1.1; }
+.madrid-title { font-family:'DM Serif Display',serif; font-size:clamp(2rem,7vw,4.8rem); color:#00205b; font-weight:700; line-height:1.1; }
 .madrid-title span { color:#c9a84c; display:block; }
 .madrid-body { max-width:600px; margin:1.8rem auto; font-size:1.1rem; line-height:1.9; color:#1a3060; font-style:italic; }
-.madrid-hala { font-family:'Cinzel',serif; font-size:clamp(1.4rem,5vw,2.5rem); color:#00205b; letter-spacing:0.2em; font-weight:700; margin-top:1.5rem; }
+.madrid-hala { font-family:'DM Serif Display',serif; font-size:clamp(1.4rem,5vw,2.5rem); color:#00205b; letter-spacing:0.2em; font-weight:700; margin-top:1.5rem; }
 .madrid-hala span { color:#c9a84c; }
 
 /* REASONS */
-.reasons-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,4vw,2.5rem); color:#3a1a0a; text-align:center; margin-bottom:2.8rem; }
+.reasons-title { font-family:'DM Serif Display',serif; font-size:clamp(1.5rem,4vw,2.5rem); color:#3a1a0a; text-align:center; margin-bottom:2.8rem; }
 .reason-list { list-style:none; }
 .reason-item { display:flex; align-items:baseline; gap:1.4rem; padding:1.3rem 0; border-bottom:1px solid rgba(180,80,30,0.12); transition:padding-left 0.3s; }
 .reason-item:hover { padding-left:0.6rem; }
-.reason-num { font-family:'Cinzel',serif; font-size:0.65rem; color:#c96030; letter-spacing:0.2em; min-width:2rem; opacity:0.7; }
+.reason-num { font-family:'DM Serif Display',serif; font-size:0.65rem; color:#c96030; letter-spacing:0.2em; min-width:2rem; opacity:0.7; }
 .reason-text { font-size:clamp(1rem,2.5vw,1.2rem); color:#3a1a0a; line-height:1.6; font-style:italic; }
-.reason-text.special { color:#c96030; font-style:normal; font-family:'Cinzel',serif; font-size:clamp(0.95rem,2.5vw,1.1rem); }
-.reasons-close { margin-top:2.5rem; border-top:1px solid rgba(180,80,30,0.15); padding-top:2rem; text-align:center; font-family:'Cinzel',serif; font-size:clamp(0.9rem,2.5vw,1.1rem); color:#c96030; font-style:italic; }
+.reason-text.special { color:#c96030; font-style:normal; font-family:'DM Serif Display',serif; font-size:clamp(0.95rem,2.5vw,1.1rem); }
+.reasons-close { margin-top:2.5rem; border-top:1px solid rgba(180,80,30,0.15); padding-top:2rem; text-align:center; font-family:'DM Serif Display',serif; font-size:clamp(0.9rem,2.5vw,1.1rem); color:#c96030; font-style:italic; }
 
 /* POEM */
 .poem-symbol { font-size:1.8rem; color:#6090c0; margin-bottom:1.5rem; }
-.poem-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,4vw,2.4rem); color:#e8f0f8; margin-bottom:3rem; }
+.poem-title { font-family:'DM Serif Display',serif; font-size:clamp(1.5rem,4vw,2.4rem); color:#e8f0f8; margin-bottom:3rem; }
 .poem-body { max-width:560px; margin:0 auto; text-align:left; }
 .poem-stanza { margin-bottom:2.2rem; }
 .poem-line { font-size:clamp(0.95rem,2.5vw,1.12rem); line-height:2.1; color:#b8cce0; }
 .poem-sign { margin-top:2.5rem; text-align:right; font-style:italic; color:#7aaad8; font-size:1.1rem; }
 
 /* ORIKI */
-.oriki-title { font-family:'Cinzel',serif; font-size:clamp(2rem,6vw,3.5rem); color:#2a1200; text-align:center; margin-bottom:0.4rem; }
-.oriki-sub { font-family:'Cinzel',serif; font-size:clamp(0.8rem,2.5vw,1.1rem); color:#b06020; letter-spacing:0.2em; text-align:center; margin-bottom:2.5rem; font-style:italic; }
+.oriki-title { font-family:'DM Serif Display',serif; font-size:clamp(2rem,6vw,3.5rem); color:#2a1200; text-align:center; margin-bottom:0.4rem; }
+.oriki-sub { font-family:'DM Serif Display',serif; font-size:clamp(0.8rem,2.5vw,1.1rem); color:#b06020; letter-spacing:0.2em; text-align:center; margin-bottom:2.5rem; font-style:italic; }
 .oriki-cols { display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
-.oriki-col-label { font-family:'Cinzel',serif; font-size:0.62rem; letter-spacing:0.4em; text-transform:uppercase; color:#b06020; margin-bottom:1.2rem; opacity:0.7; }
+.oriki-col-label { font-family:'DM Serif Display',serif; font-size:0.62rem; letter-spacing:0.4em; text-transform:uppercase; color:#b06020; margin-bottom:1.2rem; opacity:0.7; }
 .oriki-text { font-size:clamp(0.85rem,2vw,1rem); line-height:2.2; color:#3a1800; }
 .oriki-text p { margin-bottom:1.5rem; }
 
 /* GALLERY */
-.gallery-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,4vw,2.5rem); color:#200a3a; margin-bottom:0.5rem; }
+.gallery-title { font-family:'DM Serif Display',serif; font-size:clamp(1.5rem,4vw,2.5rem); color:#200a3a; margin-bottom:0.5rem; }
 .gallery-sub { font-style:italic; color:#6040a0; margin-bottom:2.5rem; font-size:1rem; }
 .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 .gallery-slot { aspect-ratio:3/4; border:1px solid rgba(120,60,200,0.2); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.6rem; background:rgba(255,255,255,0.4); overflow:hidden; position:relative; transition:border-color 0.3s,transform 0.3s; }
 .gallery-slot:hover { border-color:#8060c0; transform:scale(1.02); }
 .gallery-slot img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
 .gallery-ph { font-size:1.8rem; opacity:0.3; }
-.gallery-ph-text { font-size:0.65rem; letter-spacing:0.2em; color:#8060a0; font-family:'Lato',sans-serif; text-transform:uppercase; }
+.gallery-ph-text { font-size:0.65rem; letter-spacing:0.2em; color:#8060a0; font-family:'Jost',sans-serif; text-transform:uppercase; }
 
 /* CLOSING */
 .closing-flame { font-size:3rem; animation:floatY 4s ease-in-out infinite; margin-bottom:1.5rem; display:block; }
-.closing-title { font-family:'Cinzel',serif; font-size:clamp(1rem,3vw,1.3rem); letter-spacing:0.4em; color:#e090b0; text-transform:uppercase; margin-bottom:2.5rem; opacity:0.85; }
+.closing-title { font-family:'DM Serif Display',serif; font-size:clamp(1rem,3vw,1.3rem); letter-spacing:0.4em; color:#e090b0; text-transform:uppercase; margin-bottom:2.5rem; opacity:0.85; }
 .closing-card { max-width:580px; margin:0 auto; text-align:left; font-size:clamp(1rem,2.5vw,1.12rem); line-height:2; color:#2a1200; font-style:italic; background: linear-gradient(135deg,#f5e6c8 0%,#eedcb0 40%,#e8d4a0 100%); border:none; padding:2.8rem; box-shadow: 4px 6px 24px rgba(0,0,0,0.35), inset 0 0 60px rgba(180,120,40,0.08); position:relative; }
-.closing-sign { text-align:right; margin-top:1.8rem; color:#7a3a10; font-style:normal; font-family:'Cinzel',serif; font-size:0.9rem; letter-spacing:0.1em; }
-.closing-footer { margin-top:4rem; font-size:0.7rem; color:#4a2a3a; letter-spacing:0.25em; font-family:'Lato',sans-serif; text-transform:uppercase; opacity:0.5; }
+.closing-sign { text-align:right; margin-top:1.8rem; color:#7a3a10; font-style:normal; font-family:'DM Serif Display',serif; font-size:0.9rem; letter-spacing:0.1em; }
+.closing-footer { margin-top:4rem; font-size:0.9rem; color:#e8c8d8; letter-spacing:0.25em; font-family:'Jost',sans-serif; text-transform:uppercase; opacity:1; font-weight:500; }
 
 
 /* LOCAL AUDIO PLAYER */
@@ -183,17 +183,23 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
   max-width: 480px;
   margin: 0.75rem auto 0;
   height: 44px;
-  border-radius: 0;
+  border-radius: 6px;
   accent-color: #c9a84c;
-  filter: sepia(0.2);
+  transition: box-shadow 0.6s ease;
 }
-audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
+.local-audio.glowing {
+  animation: audioGlow 1.8s ease-in-out infinite;
+}
 
 /* KEYFRAMES */
 @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
 @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
 @keyframes riseHeart { 0%{opacity:0;transform:translateY(100vh) scale(0.6)} 10%{opacity:0.5} 90%{opacity:0.15} 100%{opacity:0;transform:translateY(-20vh) scale(1.1)} }
 @keyframes mcPulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+@keyframes audioGlow {
+  0%,100% { box-shadow: 0 0 0 3px rgba(201,168,76,0.4), 0 0 18px rgba(201,168,76,0.25); }
+  50%      { box-shadow: 0 0 0 5px rgba(201,168,76,0.75), 0 0 36px rgba(201,168,76,0.55); }
+}
 
 /* RESPONSIVE */
 @media(max-width:680px){ .may-grid{grid-template-columns:1fr} .chess-grid{grid-template-columns:1fr} .chess-pieces{display:none} .oriki-cols{grid-template-columns:1fr} .gallery-grid{grid-template-columns:1fr 1fr} .closing-card{padding:1.8rem} }
@@ -329,7 +335,6 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
 <!-- REASONS -->
 <section id="reasons">
   <div class="section-inner reveal">
-    <div class="section-label" style="color:#c96030;">With Dandelions playing softly</div>
     <h2 class="reasons-title">10 Reasons I Love You</h2>
     <div class="divider" style="background:#c96030;"></div>
     <div style="text-align:center;margin-bottom:2.2rem;">
@@ -337,18 +342,18 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
       <audio controls class="local-audio" src="./audio/Dandelions.mp3"></audio>
     </div>
     <ul class="reason-list">
-      <li class="reason-item"><span class="reason-num">01</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">02</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">03</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">04</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">05</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">06</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">07</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">08</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
-      <li class="reason-item"><span class="reason-num">09</span><span class="reason-text">Because you are Oluwaseyifunmi.</span></li>
+      <li class="reason-item"><span class="reason-num">01</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">02</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">03</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">04</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">05</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">06</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">07</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">08</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
+      <li class="reason-item"><span class="reason-num">09</span><span class="reason-text">Because Ọlúwásèyífùnmi.</span></li>
       <li class="reason-item"><span class="reason-num">10</span><span class="reason-text special">Because you love me. 🤍</span></li>
     </ul>
-    <div class="reasons-close">Because you are Oluwaseyifunmi. That carries strength like a crown.</div>
+    <div class="reasons-close">My Ọlúwásèyífùnmi, the one who carries strength like a crown. Oko temi. 🤍</div>
   </div>
 </section>
 
@@ -397,7 +402,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
   <div class="section-inner reveal">
     <div class="section-label" style="color:#b06020;">His Name, Spoken into the Sky</div>
     <h2 class="oriki-title">Alani</h2>
-    <div class="oriki-sub">Oluwaseyifunmi · Eni ti a ye ko ni</div>
+    <div class="oriki-sub">Ọlúwásèyífùnmi · Eni ti a ye ko ni</div>
     <div class="divider" style="background:#b06020;"></div>
     <div class="music-label" style="color:#b06020;">🎵 Meji Meji, Brymo</div>
     <audio controls class="local-audio" src="./audio/Meji meji.mp3" style="margin-bottom:2.5rem;"></audio>
@@ -457,7 +462,7 @@ audio::-webkit-media-controls-panel { background: rgba(10,8,5,0.85); }
     <span class="closing-flame">☕</span>
     <div class="closing-title">A Note for You</div>
     <div class="closing-card">
-      <p style="font-size:0.72rem;letter-spacing:0.3em;font-family:'Lato',sans-serif;text-transform:uppercase;color:#9a7040;margin-bottom:1.8rem;font-style:normal;">A letter for Ifemi</p>
+      <p style="font-size:0.72rem;letter-spacing:0.3em;font-family:'Jost',sans-serif;text-transform:uppercase;color:#9a7040;margin-bottom:1.8rem;font-style:normal;">A letter for Ifemi</p>
       <p>We are a team.</p>
       <p>And I choose you.</p>
       <p>Not because it is always easy, not because we are perfect, but because there is something steady between us that I have learned to trust. Our relationship is built on God, and we are helped by Him every single day. He is in our boat. He always has been.</p>
@@ -528,11 +533,35 @@ function tick() {
 }
 setInterval(tick,1000); tick();
 
+// ONE SONG AT A TIME — stops all other audio when a new one plays
+document.addEventListener('play', function(e) {
+  document.querySelectorAll('audio').forEach(a => { if (a !== e.target) a.pause(); });
+}, true);
+
 // SCROLL REVEAL
 new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1})
   .observe && document.querySelectorAll('.reveal').forEach(el =>
     new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1}).observe(el)
   );
+
+// AUDIO GLOW — pulses the player when section scrolls into view
+const glowObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    const player = e.target.querySelector('.local-audio');
+    if (!player) return;
+    if (e.isIntersecting) {
+      player.classList.add('glowing');
+    } else {
+      player.classList.remove('glowing');
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('section').forEach(s => glowObs.observe(s));
+
+// Stop glowing once he actually presses play
+document.querySelectorAll('.local-audio').forEach(a => {
+  a.addEventListener('play', () => a.classList.remove('glowing'));
+});
 
 // MUSIC CORNER ON SCROLL
 const mcMap = [
