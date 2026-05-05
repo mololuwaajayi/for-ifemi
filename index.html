@@ -284,17 +284,17 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
       <div class="may-card">
         <div class="may-letter">M</div>
         <div class="may-word">Masterful</div>
-        <div class="may-desc">Like every move you make on the board. Calculated. Ahead. Already thinking three steps past the moment.</div>
+        <div class="may-desc">Like every move you make on the board, calculated, ahead, already thinking three steps past the moment.</div>
       </div>
       <div class="may-card">
         <div class="may-letter">A</div>
-        <div class="may-word">Ardent</div>
-        <div class="may-desc">The fire you carry for what you love. For Madrid. For the people you choose to stay for.</div>
+        <div class="may-word">All of You</div>
+        <div class="may-desc">Every part of you, the way you think, the way you love, the way you show up, it is all something worth celebrating.</div>
       </div>
       <div class="may-card">
         <div class="may-letter">Y</div>
         <div class="may-word">Yours</div>
-        <div class="may-desc">This month. This year. This whole celebration. All of it belongs to you. You earned every single day.</div>
+        <div class="may-desc">This month, this year, this whole celebration, all of it belongs to you, you earned every single day.</div>
       </div>
     </div>
     <div class="music-label" style="color:#c05070;">🎵 Playing for this section</div>
@@ -313,9 +313,9 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
     <div class="chess-grid">
       <div class="chess-pieces">♔ ♕<br>♖ ♗<br>♘ ♙</div>
       <div class="chess-body">
-        <p>There is a kind of man who sees the whole board while everyone else is still learning the pieces. Who holds the centre, not by noise, but by presence.</p>
-        <p>You are <em>that</em> man, Ifemi. Every room, every move, every decision. Deliberate. Intentional. Already ahead of the conversation.</p>
-        <p>Chess taught you that the most powerful play is not always the loudest one. And you live that truth every single day.</p>
+        <p>There is a kind of man who sees the whole board while everyone else is still learning the pieces, who holds the centre, not by noise, but by presence.</p>
+        <p>You are <em>that</em> man, Ifemi. Every room, every move, every decision, deliberate, intentional, already ahead of the conversation.</p>
+        <p>Chess taught you that the most powerful play is not always the loudest one, and you live that truth every single day.</p>
         <div class="chess-pull">"You are my favourite move. The one I would make again in every version of this life."</div>
       </div>
     </div>
@@ -332,7 +332,7 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
     <div class="madrid-crest">⚽</div>
     <h2 class="madrid-title">Hala Madrid<span>Hala Ifemi</span></h2>
     <div class="divider" style="background:#c9a84c;"></div>
-    <p class="madrid-body">Real Madrid wins when they should not be able to. They find the way in the 90th minute, in the final, in the dark. That is you, Ifemi. Built the same way. The kind that does not fold. That finds the path through. That turns ordinary moments into something people remember. Madrid is your team because your spirit is the same: stubborn, brilliant, and made for the biggest stages.</p>
+    <p class="madrid-body">I used to wonder what it meant to love something so fiercely, the way you love Madrid. Then I met you, and I understood. You love the way they play, with everything, until the very last second, never giving up on what they believe is theirs. That is the same love you bring into this relationship, Ifemi. Steady, fierce, and faithful. You chose this, you choose it every day, and that means more to me than you will ever know. Hala Madrid, because they remind me of you, and I will always, always be cheering for you.</p>
     <div class="madrid-hala">Hala Madrid <span>y nada mas</span> 🏆</div>
     <div class="music-label" style="color:#00205b;">🎵 Hala Madrid Anthem</div>
     <audio controls class="local-audio" src="./audio/Hala Madrid.mp3"></audio>
@@ -601,6 +601,16 @@ const glowObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.4 });
 document.querySelectorAll('section').forEach(s => glowObs.observe(s));
+
+// ONE SONG AT A TIME
+document.addEventListener('play', function(e) {
+  document.querySelectorAll('audio').forEach(a => {
+    if (a !== e.target) {
+      a.pause();
+      a.currentTime = 0;
+    }
+  });
+}, true);
 
 // Stop glowing once he actually presses play
 document.querySelectorAll('.local-audio').forEach(a => {
