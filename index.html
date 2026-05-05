@@ -196,6 +196,21 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
 @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
 @keyframes riseHeart { 0%{opacity:0;transform:translateY(100vh) scale(0.6)} 10%{opacity:0.5} 90%{opacity:0.15} 100%{opacity:0;transform:translateY(-20vh) scale(1.1)} }
 @keyframes mcPulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+@keyframes moveLeft {
+  0%   { opacity:0; transform:translateX(-60px); }
+  60%  { opacity:1; transform:translateX(20px); }
+  100% { opacity:1; transform:translateX(0px); }
+}
+@keyframes moveRight {
+  0%   { opacity:0; transform:translateX(60px); }
+  60%  { opacity:1; transform:translateX(-20px); }
+  100% { opacity:1; transform:translateX(0px); }
+}
+@keyframes riseHeart2 {
+  0%   { opacity:0; transform:translateY(0) scale(0.5); }
+  50%  { opacity:1; transform:translateY(-50px) scale(1.2); }
+  100% { opacity:0.8; transform:translateY(-80px) scale(1); }
+}
 @keyframes audioGlow {
   0%,100% { box-shadow: 0 0 0 3px rgba(201,168,76,0.4), 0 0 18px rgba(201,168,76,0.25); }
   50%      { box-shadow: 0 0 0 5px rgba(201,168,76,0.75), 0 0 36px rgba(201,168,76,0.55); }
@@ -212,8 +227,16 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
 <div id="gate">
   <div class="gate-rose">🌹</div>
   <div class="gate-title">For Ifemi</div>
-  <div class="gate-sub">My Benin Alpha Male.<br>Press play before you go any further.</div>
-  <button class="gate-btn" id="gate-btn" onclick="startJourney()">Play Before You Continue</button>
+  <div class="gate-sub">My Benin Alpha Male.</div>
+  <div style="border:1px solid rgba(201,168,76,0.25);padding:1.4rem 2rem;max-width:300px;margin:0 auto;text-align:left;">
+    <div style="font-family:'DM Serif Display',serif;font-size:0.62rem;letter-spacing:0.4em;color:#c9a84c;text-transform:uppercase;margin-bottom:1rem;text-align:center;">Before You Enter</div>
+    <div style="font-size:0.88rem;color:#9a8878;font-family:'Playfair Display',serif;font-style:italic;line-height:2.2;">
+      <div>1 &nbsp;— Make sure you have good network.</div>
+      <div>2 &nbsp;— Be alone.</div>
+      <div>3 &nbsp;— Take your time to savour every song.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each one was carefully curated for you.</div>
+    </div>
+  </div>
+  <button class="gate-btn" id="gate-btn" onclick="startJourney()">Press Play to Enter</button>
   <div class="gate-hint" id="gate-hint">The song will play. Then the door opens.</div>
   <div class="gate-prog-wrap" id="gate-prog-wrap">
     <div class="gate-progress-fill" id="gate-prog"></div>
@@ -221,6 +244,7 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
 </div>
 
 <!-- Gate song: Simi Happy Birthday -->
+<audio id="prayer-audio" src="./audio/prayer.mp3"></audio>
 <audio id="gate-audio" src="./audio/Birthday.mp3"></audio>
 
 <!-- Music corner -->
@@ -240,16 +264,6 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
     <h1 class="hero-name">Ifemi</h1>
     <div class="hero-sub">My Benin Alpha Male</div>
     <p class="hero-tag">Twenty-fire.<br>Because that is what you bring to every room you walk into.</p>
-    <div class="cd-wrap">
-      <div class="cd-label">Days until your fire</div>
-      <div class="cd-row" id="countdown">
-        <div class="cd-u"><div class="cd-num" id="cd-d">--</div><div class="cd-ul">Days</div></div>
-        <div class="cd-u"><div class="cd-num" id="cd-h">--</div><div class="cd-ul">Hours</div></div>
-        <div class="cd-u"><div class="cd-num" id="cd-m">--</div><div class="cd-ul">Minutes</div></div>
-        <div class="cd-u"><div class="cd-num" id="cd-s">--</div><div class="cd-ul">Seconds</div></div>
-      </div>
-      <div class="bday-msg" id="bday-msg">It is your day, Ifemi. You made it. 🎂</div>
-    </div>
   </div>
 </section>
 
@@ -469,7 +483,57 @@ audio { width: 100%; max-width: 480px; display: block; margin: 0.5rem auto 0; }
       <p>So on this day, your twenty-fifth, I just want you to know that I am glad we are on the same side. I am glad it is you.</p>
       <div class="closing-sign">Momo ❤</div>
     </div>
-    <div class="closing-footer">Made with love · For Ifemi · May 2025</div>
+    <div class="closing-footer">Made with love · For Ifemi · May 2026</div>
+  </div>
+</section>
+
+<!-- PRAYER SECTION -->
+<section id="prayer" style="background:linear-gradient(160deg,#0a0510 0%,#080310 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 2rem;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(100,60,180,0.1) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="section-inner reveal" style="position:relative;z-index:1;">
+    <div style="font-family:'DM Serif Display',serif;font-size:0.65rem;letter-spacing:0.5em;color:#9a80c0;text-transform:uppercase;margin-bottom:2rem;opacity:0.7;">One Last Thing</div>
+    <div style="font-size:3rem;margin-bottom:1.5rem;animation:floatY 4s ease-in-out infinite;">🕊️</div>
+    <div style="font-family:'DM Serif Display',serif;font-size:clamp(1.3rem,4vw,2rem);color:#e8d8f8;margin-bottom:1rem;">A Prayer for You</div>
+    <div style="font-style:italic;color:#9a80c0;font-size:1rem;margin-bottom:2.5rem;font-family:'Playfair Display',serif;">Press play. This one is just for you.</div>
+    <audio controls class="local-audio" id="prayer-player" src="./audio/prayer.mp3" style="max-width:380px;margin:0 auto 1rem;"></audio>
+    <div style="font-size:0.72rem;color:#6a5080;font-family:'Jost',sans-serif;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.5rem;">Momo's voice · Just for Ifemi</div>
+  </div>
+</section>
+
+<!-- HUG ANIMATION FINALE -->
+<section id="finale" style="background:linear-gradient(160deg,#080310 0%,#0a0805 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;text-align:center;">
+  <div class="section-inner reveal">
+
+    <!-- Animated hug figures -->
+    <div id="hug-wrap" style="margin-bottom:2rem;">
+      <svg viewBox="0 0 220 160" width="220" height="160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left figure -->
+        <g id="fig-left" style="animation:moveLeft 2s ease forwards 0.5s;opacity:0;">
+          <circle cx="40" cy="30" r="16" fill="#c9a84c" opacity="0.9"/>
+          <rect x="28" y="48" width="24" height="40" rx="8" fill="#c9a84c" opacity="0.7"/>
+          <line x1="28" y1="60" x2="10" y2="80" stroke="#c9a84c" stroke-width="6" stroke-linecap="round"/>
+          <line x1="52" y1="60" x2="68" y2="72" stroke="#c9a84c" stroke-width="6" stroke-linecap="round" id="left-arm"/>
+          <line x1="30" y1="88" x2="24" y2="115" stroke="#c9a84c" stroke-width="6" stroke-linecap="round"/>
+          <line x1="50" y1="88" x2="56" y2="115" stroke="#c9a84c" stroke-width="6" stroke-linecap="round"/>
+        </g>
+        <!-- Right figure -->
+        <g id="fig-right" style="animation:moveRight 2s ease forwards 0.5s;opacity:0;">
+          <circle cx="180" cy="30" r="16" fill="#e090b0" opacity="0.9"/>
+          <rect x="168" y="48" width="24" height="40" rx="8" fill="#e090b0" opacity="0.7"/>
+          <line x1="192" y1="60" x2="210" y2="80" stroke="#e090b0" stroke-width="6" stroke-linecap="round"/>
+          <line x1="168" y1="60" x2="152" y2="72" stroke="#e090b0" stroke-width="6" stroke-linecap="round" id="right-arm"/>
+          <line x1="170" y1="88" x2="164" y2="115" stroke="#e090b0" stroke-width="6" stroke-linecap="round"/>
+          <line x1="190" y1="88" x2="196" y2="115" stroke="#e090b0" stroke-width="6" stroke-linecap="round"/>
+        </g>
+        <!-- Rising heart -->
+        <text id="rising-heart" x="110" y="140" text-anchor="middle" font-size="28" style="animation:riseHeart2 3s ease forwards 2.5s;opacity:0;">❤️</text>
+      </svg>
+    </div>
+
+    <!-- I love you text appearing letter by letter -->
+    <div id="love-text" style="font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,6vw,3.5rem);color:#f0d0e8;line-height:1.3;margin-bottom:1.5rem;min-height:5rem;"></div>
+    <div id="love-sub" style="font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,3vw,1.4rem);color:#c9a84c;opacity:0;transition:opacity 1.5s ease;margin-bottom:1rem;">Oko mi. Momo ❤</div>
+    <div id="love-close" style="font-size:0.7rem;color:#4a3050;font-family:'Jost',sans-serif;letter-spacing:0.3em;text-transform:uppercase;opacity:0;transition:opacity 1.5s ease;margin-top:2rem;">You may now close this door 🌹</div>
   </div>
 </section>
 
@@ -562,6 +626,37 @@ document.querySelectorAll('section').forEach(s => glowObs.observe(s));
 document.querySelectorAll('.local-audio').forEach(a => {
   a.addEventListener('play', () => a.classList.remove('glowing'));
 });
+
+// FINALE ANIMATION — triggers when finale section scrolls into view
+const finaleObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      finaleObs.disconnect();
+      runFinale();
+    }
+  });
+}, { threshold: 0.4 });
+const finaleSec = document.getElementById('finale');
+if (finaleSec) finaleObs.observe(finaleSec);
+
+function runFinale() {
+  // Type out the love message letter by letter
+  const msg = 'I love you so much, Ọlúwásèyífùnmi.';
+  const el = document.getElementById('love-text');
+  const sub = document.getElementById('love-sub');
+  const close = document.getElementById('love-close');
+  let i = 0;
+  const iv = setInterval(() => {
+    if (i < msg.length) {
+      el.textContent += msg[i];
+      i++;
+    } else {
+      clearInterval(iv);
+      setTimeout(() => { sub.style.opacity = '1'; }, 800);
+      setTimeout(() => { close.style.opacity = '1'; }, 2000);
+    }
+  }, 60);
+}
 
 // MUSIC CORNER ON SCROLL
 const mcMap = [
